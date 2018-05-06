@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+  <head>
+    <style>
+     .js{ -- class 를 지정할때는 comma
+       font-weight: bold;
+       color:black;
+     }
+     #first{ -- id 를 지정할때는 #
+       color:green;
+     }
+     span{
+       color:orange;
+     }
+    </style>
+    <title> 종구리 </title>
+    <meta charset="utf-8"></br>
+    <h2 style ="color:powderblue">javascript</h2>
+  </head>
+
+
+  <body style="background-color:white;color:black">
+
+    <h6>basic two button</h6>
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor ='black';
+    document.querySelector('body').style.color ='white';
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color ='black';
+    ">
+
+    <h6> conditional version </h6>
+    <input id ='night_day' type = "button" value = "night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
+      document.querySelector('body').style.backgroundColor ='black';
+      document.querySelector('body').style.color ='white';
+      document.querySelector('#night_day').value = 'day'
+    }
+    else {
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.color ='black';
+      document.querySelector('#night_day').value = 'night'
+    }
+    ">
+
+    <h6>refactoring version</h6>
+    <input type = "button" value = "night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor ='black';
+      target.style.color ='white';
+      this.value = 'day';
+    }
+    else {
+      target.style.backgroundColor ='white';
+      target.style.color ='black';
+      this.value = 'night';
+    }
+    ">
+
+
+    <h1> <a href="">hello web </a></h1></br>
+
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+    <ol>
+      <li><a href="html.html" target="_blank">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+    </ol>
+    <h5> UTF8로 열어야해 </h5>
+
+    <a href="https://www.29cm.co.kr/home/" target="_blank" title="29cm">jongguri</a> is combination of <strong><u>jongsang</u></strong> and rakoon.
+
+    <p>
+    <span id="first" class="js">listen</span> today is a good today<br>
+    tomorrow is a mystery<br>
+    <span>never</span> talk about <span class="js">yesterday</span>
+    </p>
+
+    <img src="3.jpg" width="20%">
+
+    <p style="margin-top:40px;">
+    how about yester day?
+    </p>
+
+    <table>
+      <tr>
+        <td>js</td>
+        <td>male</td>
+      <tr>
+        <td>yj</td>
+        <td>female</td>
+    </table>
+  </body>
+</html>
